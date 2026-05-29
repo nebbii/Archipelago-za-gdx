@@ -46,22 +46,25 @@ class TrapChance(Range):
 @dataclass
 class ZagdxOptions(PerGameCommonOptions):
     enemysanity: Enemysanity
+    trap_chance: TrapChance
 
 
 # If we want to group our options by similar type, we can do so as well. This looks nice on the website.
 option_groups = [
     OptionGroup(
         "Gameplay Options",
-        [Enemysanity],
+        [Enemysanity, TrapChance],
     ),
 ]
 
 # Finally, we can define some option presets if we want the player to be able to quickly choose a specific "mode".
 option_presets = {
-    "boring": {
+    "easy": {
         "enemysanity": False,
+        "trap_chance": 0,
     },
-    "the true way to play": {
+    "hard": {
         "enemysanity": True,
+        "trap_chance": 0,
     },
 }

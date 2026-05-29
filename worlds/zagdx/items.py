@@ -91,7 +91,6 @@ def create_all_items(world: ZagdxWorld) -> None:
 
     itempool: list[Item] = [
         world.create_item("Boomerang"),
-        world.create_item("Celestial Sign 1"),
         world.create_item("Compass 1"),
         world.create_item("Empty Pitcher"),
         world.create_item("Full Pitcher"),
