@@ -22,11 +22,14 @@ ITEM_NAME_TO_ID = {
     "Underworld Map 1": 8,
     "Vial of Wind": 9,
     "Wand": 10,
+    "Yellow Ruby": 11,
+    "Blue Ruby": 12,
 }
 
 # Items should have a defined default classification.
 # In our case, we will make a dictionary from item name to classification.
 DEFAULT_ITEM_CLASSIFICATIONS = {
+    "Blue Ruby": ItemClassification.filler,
     "Boomerang": ItemClassification.useful,
     "Celestial Sign 1": ItemClassification.progression,
     "Compass 1": ItemClassification.useful,
@@ -37,6 +40,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Red Boots": ItemClassification.progression,
     "Underworld Map 1": ItemClassification.useful,
     "Vial of Wind": ItemClassification.progression,
+    "Yellow Ruby": ItemClassification.filler,
     "Wand": ItemClassification.progression,
 }
 
