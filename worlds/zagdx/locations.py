@@ -54,7 +54,7 @@ def create_regular_locations(world: ZagdxWorld) -> None:
     overworld_region_2 = world.get_region("Overworld Region 2 (Above Andor)")
     shrine_of_earth = world.get_region("Shrine of Earth")
 
-    overworld_region_1_locations = get_location_names_with_ids(
+    overworld_region_1_item_locations = get_location_names_with_ids(
         [
             "Overworld D24 Goriya Boomerang Drop",
             "Overworld E20 Full Pitcher",
@@ -64,9 +64,9 @@ def create_regular_locations(world: ZagdxWorld) -> None:
             "Overworld J24 Vial of Wind",
         ]
     )
-    overworld_region_1.add_locations(overworld_region_1_locations, ZagdxLocation)
+    overworld_region_1.add_locations(overworld_region_1_item_locations, ZagdxLocation)
 
-    shrine_of_earth_locations = get_location_names_with_ids(
+    shrine_of_earth_item_locations = get_location_names_with_ids(
         [
             "Shrine of Earth S104 1st Underworld Map",
             "Shrine of Earth S105 Compass",
@@ -75,8 +75,9 @@ def create_regular_locations(world: ZagdxWorld) -> None:
             "Shrine of Earth S122 1st Celestial Sign",
         ]
     )
-    shrine_of_earth.add_locations(shrine_of_earth_locations, ZagdxLocation)
+    shrine_of_earth.add_locations(shrine_of_earth_item_locations, ZagdxLocation)
 
+    if world.options.enemysanity:
 
 def create_events(world: ZagdxWorld) -> None:
     overworld_region_1 = world.get_region("Overworld Region 1 (Below Andor)")
