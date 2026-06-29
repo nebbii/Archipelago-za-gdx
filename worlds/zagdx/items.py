@@ -7,34 +7,23 @@ from BaseClasses import Item, ItemClassification
 if TYPE_CHECKING:
     from .world import ZagdxWorld
 
-# Every item must have a unique integer ID associated with it.
-# We will have a lookup from item name to ID here that, in world.py, we will import and bind to the world class.
-# Even if an item doesn't exist on specific options, it must be present in this lookup.
-ITEM_NAMES = [
-    "Blue Ruby",
-    "Boomerang",
-    "Celestial Sign 1",
-    "Compass 1",
-    "Dagger",
-    "Empty Pitcher",
-    "Firestorm",
-    "Full Pitcher",
-    "Jade Ring",
-    "Ladder",
-    "Red Boots",
-    "Underworld Map 1",
-    "Vial of Wind",
-    "Wand",
-    "Yellow Ruby",
-]
-
-def build_item_name_to_id(item_names: list[str]) -> dict[str, int]:
-    return {
-        item_name: item_id
-        for item_id, item_name in enumerate(sorted(item_names))
-    }
-
-ITEM_NAME_TO_ID = build_item_name_to_id(ITEM_NAMES)
+ITEM_NAME_TO_ID = {
+    "Blue Ruby": 1,
+    "Boomerang": 2,
+    "Celestial Sign 1": 3,
+    "Compass 1": 4,
+    "Dagger": 5,
+    "Empty Pitcher": 6,
+    "Firestorm": 7,
+    "Full Pitcher": 8,
+    "Jade Ring": 9,
+    "Ladder": 10,
+    "Red Boots": 11,
+    "Underworld Map 1": 12,
+    "Vial of Wind": 13,
+    "Wand": 14,
+    "Yellow Ruby": 15,
+}
 
 # Items should have a defined default classification.
 # In our case, we will make a dictionary from item name to classification.
