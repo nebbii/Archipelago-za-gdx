@@ -12,6 +12,8 @@ if TYPE_CHECKING:
 LOCATION_NAME_TO_ID = {
     "Overworld D24 Boomerang": 1,
     "Overworld E20 Full Pitcher": 2,
+    "Overworld F26 Candle": 14,
+    "Overworld F26 Magic Shield": 15,
     "Overworld F28 Ladder": 3,
     "Overworld H23 Wand": 4,
     "Overworld J22 Firestorm": 5,
