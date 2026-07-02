@@ -23,6 +23,8 @@ ITEM_NAME_TO_ID = {
     "Vial of Wind": 13,
     "Wand": 14,
     "Yellow Ruby": 15,
+    "Candle": 16,
+    "Magic Shield": 17,
 }
 
 # Items should have a defined default classification.
@@ -30,6 +32,7 @@ ITEM_NAME_TO_ID = {
 DEFAULT_ITEM_CLASSIFICATIONS = {
     "Blue Ruby": ItemClassification.filler,
     "Boomerang": ItemClassification.useful,
+    "Candle": ItemClassification.filler, # unimplemented
     "Celestial Sign 1": ItemClassification.progression,
     "Compass 1": ItemClassification.useful,
     "Dagger": ItemClassification.useful,
@@ -38,11 +41,12 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Full Pitcher": ItemClassification.progression | ItemClassification.filler,
     "Jade Ring": ItemClassification.progression,
     "Ladder": ItemClassification.progression,
+    "Magic Shield": ItemClassification.filler, # unimplemented
     "Red Boots": ItemClassification.progression,
     "Underworld Map 1": ItemClassification.useful,
     "Vial of Wind": ItemClassification.progression,
-    "Yellow Ruby": ItemClassification.filler,
     "Wand": ItemClassification.progression,
+    "Yellow Ruby": ItemClassification.filler,
 }
 
 
@@ -52,7 +56,7 @@ class ZagdxItem(Item):
     game = "Zelda's Adventure GDX"
 
 def get_random_filler_item_name(world: ZagdxWorld) -> str:
-    if world.random.randint(0, 99) < world.options.trap_chance:
+    if world.random.randint(0, 99) < 75:
         return "Blue Ruby"
     return "Yellow Ruby"
 
@@ -66,6 +70,7 @@ def create_item_with_correct_classification(world: ZagdxWorld, name: str) -> Zag
 def create_all_items(world: ZagdxWorld) -> None:
     itempool: list[Item] = [
         world.create_item("Boomerang"),
+        world.create_item("Candle"),
         world.create_item("Compass 1"),
         world.create_item("Dagger"),
         world.create_item("Empty Pitcher"),
@@ -73,6 +78,7 @@ def create_all_items(world: ZagdxWorld) -> None:
         world.create_item("Full Pitcher"),
         world.create_item("Jade Ring"),
         world.create_item("Ladder"),
+        world.create_item("Magic Shield"),
         world.create_item("Red Boots"),
         world.create_item("Underworld Map 1"),
         world.create_item("Vial of Wind"),
