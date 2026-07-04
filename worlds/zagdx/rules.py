@@ -30,8 +30,11 @@ def set_all_entrance_rules(world: ZagdxWorld) -> None:
 def set_all_location_rules(world: ZagdxWorld) -> None:
     can_defeat_basic_enemy: Rule = HasAny("Wand", "Dagger", "Boomerang", "Jade Ring", "Calm", "Firestorm")
     goriya_boomerang_drop = world.get_location("Overworld D24 Boomerang")
-
     world.set_rule(can_defeat_basic_enemy, goriya_boomerang_drop)
+
+    shouldnt_be_broke: Rule = HasAny("Blue Ruby", "Yellow Ruby")
+    overworld_firestorm = world.get_location("Overworld J22 Firestorm")
+    world.set_rule(shouldnt_be_broke, overworld_firestorm)
 
     shrine_of_earth_chasm = world.get_location("Shrine of Earth Chasm")
 
