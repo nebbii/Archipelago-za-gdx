@@ -168,12 +168,15 @@ def create_regular_locations(world: ZagdxWorld) -> None:
         [
             "Overworld D24 Boomerang",
             "Overworld E20 Full Pitcher",
+            "Overworld F26 Candle",
+            "Overworld F26 Magic Shield",
             "Overworld F28 Ladder",
             "Overworld H23 Wand",
             "Overworld J22 Firestorm",
             "Overworld J24 Empty Pitcher",
             "Overworld J24 Vial of Wind",
             "Overworld J22a Dagger",
+            "Overworld J22a Calm",
         ]
     )
     overworld_region_1.add_locations(overworld_region_1_item_locations, ZagdxLocation)
