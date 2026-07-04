@@ -28,7 +28,7 @@ def set_all_entrance_rules(world: ZagdxWorld) -> None:
     world.set_rule(overworld_region_1_to_overworld_region_2, can_cross_andor)
 
 def set_all_location_rules(world: ZagdxWorld) -> None:
-    can_defeat_basic_enemy: Rule = HasAny("Wand", "Dagger", "Boomerang", "Jade Ring")
+    can_defeat_basic_enemy: Rule = HasAny("Wand", "Dagger", "Boomerang", "Jade Ring", "Calm", "Firestorm")
     goriya_boomerang_drop = world.get_location("Overworld D24 Boomerang")
 
     world.set_rule(can_defeat_basic_enemy, goriya_boomerang_drop)

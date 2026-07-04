@@ -25,19 +25,21 @@ ITEM_NAME_TO_ID = {
     "Yellow Ruby": 15,
     "Candle": 16,
     "Magic Shield": 17,
+    "Calm": 18,
 }
 
 # Items should have a defined default classification.
 # In our case, we will make a dictionary from item name to classification.
 DEFAULT_ITEM_CLASSIFICATIONS = {
     "Blue Ruby": ItemClassification.filler,
-    "Boomerang": ItemClassification.useful,
+    "Boomerang": ItemClassification.progression,
     "Candle": ItemClassification.filler, # unimplemented
+    "Calm": ItemClassification.progression,
     "Celestial Sign 1": ItemClassification.progression,
     "Compass 1": ItemClassification.useful,
-    "Dagger": ItemClassification.useful,
+    "Dagger": ItemClassification.progression,
     "Empty Pitcher": ItemClassification.progression | ItemClassification.filler,
-    "Firestorm": ItemClassification.useful,
+    "Firestorm": ItemClassification.progression,
     "Full Pitcher": ItemClassification.progression | ItemClassification.filler,
     "Jade Ring": ItemClassification.progression,
     "Ladder": ItemClassification.progression,
@@ -71,6 +73,7 @@ def create_all_items(world: ZagdxWorld) -> None:
     itempool: list[Item] = [
         world.create_item("Boomerang"),
         world.create_item("Candle"),
+        world.create_item("Calm"),
         world.create_item("Compass 1"),
         world.create_item("Dagger"),
         world.create_item("Empty Pitcher"),

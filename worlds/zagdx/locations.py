@@ -18,6 +18,7 @@ LOCATION_NAME_TO_ID = {
     "Overworld H23 Wand": 4,
     "Overworld J22 Firestorm": 5,
     "Overworld J22a Dagger": 6,
+    "Overworld J22a Calm": 18,
     "Overworld J24 Empty Pitcher": 7,
     "Overworld J24 Vial of Wind": 8,
 
