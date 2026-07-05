@@ -44,7 +44,7 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Jade Ring": ItemClassification.progression,
     "Ladder": ItemClassification.progression,
     "Magic Shield": ItemClassification.filler, # unimplemented
-    "Red Boots": ItemClassification.progression,
+    "Red Boots": ItemClassification.filler, # no region 2 yet
     "Underworld Map 1": ItemClassification.useful,
     "Vial of Wind": ItemClassification.progression,
     "Wand": ItemClassification.progression,

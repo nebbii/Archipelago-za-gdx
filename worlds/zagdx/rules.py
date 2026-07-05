@@ -35,6 +35,26 @@ def set_all_location_rules(world: ZagdxWorld) -> None:
     shouldnt_be_broke: Rule = HasAny("Blue Ruby", "Yellow Ruby")
     overworld_firestorm = world.get_location("Overworld J22 Firestorm")
     world.set_rule(shouldnt_be_broke, overworld_firestorm)
+    world.set_rule(can_defeat_basic_enemy, overworld_firestorm) # can grind for rupees
+
+    overworld_calm = world.get_location("Overworld J22a Calm")
+    world.set_rule(shouldnt_be_broke, overworld_calm)
+    world.set_rule(can_defeat_basic_enemy, overworld_calm) # can grind for rupees
+
+    overworld_magic_shield = world.get_location("Overworld F26 Magic Shield")
+    world.set_rule(shouldnt_be_broke, overworld_magic_shield)
+    world.set_rule(can_defeat_basic_enemy, overworld_magic_shield) # can grind for rupees
+
+    overworld_candle = world.get_location("Overworld F26 Candle")
+    world.set_rule(shouldnt_be_broke, overworld_candle)
+    world.set_rule(can_defeat_basic_enemy, overworld_candle) # can grind for rupees
+
+    overworld_full_pitcher = world.get_location("Overworld E20 Full Pitcher")
+    world.set_rule(overworld_full_pitcher, Has("Empty Pitcher"))
+
+    overworld_vial_of_wind = world.get_location("Overworld J24 Vial of Wind")
+    world.set_rule(overworld_vial_of_wind, Has("Full Pitcher"))
+
 
     shrine_of_earth_chasm = world.get_location("Shrine of Earth Chasm")
 
@@ -67,4 +87,4 @@ def set_all_location_rules(world: ZagdxWorld) -> None:
     world.set_rule(shrine_of_earth_celestial_sign_1, Has("Wand") & Has("Jade Ring"))
 
 def set_completion_condition(world: ZagdxWorld) -> None:
-    world.multiworld.completion_condition[world.player] = lambda state: state.has("Celestial Sign 1", world.player)
+    world.set_completion_rule(Has("Celestial Sign 1"))
