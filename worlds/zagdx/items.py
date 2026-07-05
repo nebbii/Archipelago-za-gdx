@@ -38,9 +38,9 @@ DEFAULT_ITEM_CLASSIFICATIONS = {
     "Celestial Sign 1": ItemClassification.progression,
     "Compass 1": ItemClassification.useful,
     "Dagger": ItemClassification.progression,
-    "Empty Pitcher": ItemClassification.progression | ItemClassification.filler,
+    "Empty Pitcher": ItemClassification.progression,
     "Firestorm": ItemClassification.progression,
-    "Full Pitcher": ItemClassification.progression | ItemClassification.filler,
+    "Full Pitcher": ItemClassification.progression,
     "Jade Ring": ItemClassification.progression,
     "Ladder": ItemClassification.progression,
     "Magic Shield": ItemClassification.filler, # unimplemented
